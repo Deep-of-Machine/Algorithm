@@ -1,5 +1,16 @@
 n, m = map(int, input().split())
 
-a = [[[0]* j for j in range(m)]* i for i in range(n)]
+a = []
+b = []
+for i in range(n):
+    k = list(map(int, input().split()))
+    a.append(k)
 
-print(a)
+for i in range(n):
+    k = list(map(int, input().split()))
+    b.append(k)
+
+for i, j in zip(a, b):
+    for k in range(m):
+        print(i[k] + j[k], end=" ")
+    print()
